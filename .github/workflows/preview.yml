@@ -17,5 +17,5 @@ jobs:
       - name: Deploy
         uses: shlinkio/deploy-preview-action@v1.0.1
         with:
-          branch: ${{ github.ref_name }} # The branch from where the GitHub Pages are served (defaults to preview-env)
+          branch: workflows # The branch from where the GitHub Pages are served (defaults to preview-env)
           folder: dist # The folder where the artifacts to publish are (defaults to the project 
