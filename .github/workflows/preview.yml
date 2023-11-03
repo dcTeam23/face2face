@@ -5,6 +5,9 @@ on:
 
 jobs:
   build-and-deploy:
+     
+    permissions: write-all    
+
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
@@ -17,5 +20,6 @@ jobs:
       - name: Deploy
         uses: shlinkio/deploy-preview-action@v1.0.1
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages # The branch from where the GitHub Pages are served (defaults to preview-env)
           folder: dist # The folder where the artifacts to publish are (defaults to the project 
