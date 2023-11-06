@@ -14,5 +14,11 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  managerHead: (head) => {
+    return (`
+      <base href="/sb/">
+      ${head}
+    `);
+  },
 };
 export default config;
