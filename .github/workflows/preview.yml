@@ -33,11 +33,11 @@ jobs:
 
       - name: Build Vite Project
         env:
-          BASE_URL: ${{ needs.info.outputs.baseUrl }}
+          BASE_URL: ${{ needs.info.outputs.baseUrl }}/
         working-directory: .
         run: |
           npm ci
-          npm run build -- --base ${{ needs.info.outputs.baseUrl }}/
+          npm run build
           npm run build-storybook
         shell: bash
       

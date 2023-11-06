@@ -14,12 +14,9 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  managerHead: (head) => {
-    const base  = (process.env.BASE_URL ?? '') + '/sb/'; 
-    return (`
-      <base href="${base}">
-      ${head}
-    `);
+  viteFinal: (config) => {
+    config.base = (process.env.BASE_URL ?? '') + 'sb/';
+    return config;
   },
 };
 export default config;
