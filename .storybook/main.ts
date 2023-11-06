@@ -15,8 +15,9 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   managerHead: (head) => {
+    const base  = (process.env.BASE_URL ?? '') + '/sb/'; 
     return (`
-      <base href="/sb/">
+      <base href="${base}">
       ${head}
     `);
   },

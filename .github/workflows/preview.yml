@@ -31,10 +31,11 @@ jobs:
         with:
           node-version: latest
       - name: Build Vite Project
+        env:
+          BASE_URL: ${{ needs.info.outputs.baseUrl }}
         working-directory: .
         run: |
           npm ci
-          echo "baseUrl = ${{ needs.info.outputs.baseUrl }}"
           npm run build -- --base ${{ needs.info.outputs.baseUrl }}/
           npm run build-storybook
         shell: bash
