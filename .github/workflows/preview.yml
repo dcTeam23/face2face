@@ -1,25 +1,47 @@
-name: Build and Deploy
+name: PR Preview
 
 on:
-  pull_request: null
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency: ci-${{ github.ref }}
 
 jobs:
-  build-and-deploy:
-     
-    permissions: write-all    
+  info: 
+    uses: ./.github/workflows/call-info.yml
 
-    runs-on: ubuntu-20.04
+  vite:
+    needs: info
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      # Checkout to repository
+      - name: Checkout to repository
         uses: actions/checkout@v2
-      - name: Install and Build
-        run: |
-          npm install
-          npm run build
 
-      - name: Deploy
-        uses: shlinkio/deploy-preview-action@v1.0.1
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages # The branch from where the GitHub Pages are served (defaults to preview-env)
-          folder: dist # The folder where the artifacts to publish are (defaults to the project 
+          node-version: latest
+      - name: Build Vite Project
+        working-directory: .
+        run: |
+          npm ci
+          echo "baseUrl = ${{ needs.info.outputs.baseUrl }}"
+          npm run build --base ${{ needs.info.outputs.baseUrl }}
+          npm run build-storybook
+        shell: bash
+      
+      - name: Deploy PR Preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./dist
+          preview-branch: gh-pages
+
