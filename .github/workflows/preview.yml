@@ -30,6 +30,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: latest
+
       - name: Build Vite Project
         env:
           BASE_URL: ${{ needs.info.outputs.baseUrl }}
@@ -41,8 +42,16 @@ jobs:
         shell: bash
       
       - name: Deploy PR Preview
+        if: ${{ contains(fromJSON('["opened", "reopened", "synchronize"]'), github.event.action) }}
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./dist/
+          action: deploy
+
+      - name: Remove PR preview if closed without merge 
+        if: ${{ github.event.action == 'closed' && !github.event.pull_request.merged }}
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./dist
-          preview-branch: gh-pages
+          action: remove
 
