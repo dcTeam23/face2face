@@ -19,7 +19,12 @@
     ${f()}
     
     <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
+      Click on the Vite, TypeScript and Storybook logos to learn more
+    </p>
+    <p>
+      <a href="/sb">
+        Click here to see our Storybook live! 
+      </a>
     </p>
   </div>
 `;d(l("#counter"));
