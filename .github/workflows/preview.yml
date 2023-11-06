@@ -35,7 +35,7 @@ jobs:
         run: |
           npm ci
           echo "baseUrl = ${{ needs.info.outputs.baseUrl }}"
-          npm run build --base ${{ needs.info.outputs.baseUrl }}
+          npm run build -- --base ${{ needs.info.outputs.baseUrl }}/
           npm run build-storybook
         shell: bash
       
