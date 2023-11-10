@@ -24,7 +24,7 @@ type Story = StoryObj;
 export const Primary: Story = {
   args: {
     link: 'github.com', 
-    imgSrc: 'https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif', 
+    imgSrc: 'https://avatars.githubusercontent.com/u/132667649?v=4', 
     descricao: 'Octocat from Github '
   }
 };

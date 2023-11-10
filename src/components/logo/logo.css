@@ -2,3 +2,8 @@
 a.logo > img {
   width: 50px;
 }
+
+img {
+  border-radius: 50px;
+  border: 5px solid red;
+}
