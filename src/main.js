@@ -11,8 +11,8 @@ const app = $('#app');
 app.innerHTML = `
   <div>
     
-    ${logo("https://vitejs.dev",viteLogo,"Vite logo")}
-    ${logo("https://www.typescriptlang.org/",typescriptLogo,"TypeScript logo")}
+    ${logo({link: "https://vitejs.dev",imgSrc: viteLogo,descricao: "Vite logo"})}
+    ${logo({link: "https://www.typescriptlang.org/",imgSrc:  typescriptLogo,descricao: "TypeScript logo"})}
 
 
     <h1>Vite + TypeScript</h1>
@@ -27,26 +27,4 @@ app.innerHTML = `
     </p>
     </div>
 `
-const button = $('#counter')
-setupCounter(button);
-function counter() {
-  return `
-  <div class="card">
-  <button id="counter" type="button"></button>
-  </div>
-`;
-}
-
-/**
- * @param {string} link
- * @param {string} imagem
- * @param {string} comentario
- */
-function logo(link, imagem, comentario) {
-  return `
-  <a href="${link}">
-  <img src="${imagem}" class="logo" alt= "${comentario}" />
-  </a>
-  `
-}
-
+setupCounter($('#counter'));
