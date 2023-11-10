@@ -23,7 +23,7 @@ type Story = StoryObj;
 export const Primary: Story = {
   args: {
     nome: 'Yan Felipe',
-    cargo: 'Desenvolvedor',
+    cargo: 'Web Development',
     img: 'https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-avatar-ou-perfil-humano_23-2150671116.jpg?t=st=1699623817~exp=1699624417~hmac=cb23c24d0f509f138b36b639fb3bd96346c3269852e92c7fe0d5571e0bbe281d',
   },
 };

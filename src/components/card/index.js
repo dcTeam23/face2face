@@ -15,6 +15,7 @@ export function card(props) {
   const { nome, cargo, img } = props;
   return `
     <div class="card">
+      <p class="top">Profile</p>
       <div class="header">
         ${avatar({ imgSrc: img, descricao: `profile picture from ${nome}` })}
       </div>
