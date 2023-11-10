@@ -45,13 +45,13 @@ jobs:
         if: ${{ contains(fromJSON('["opened", "reopened", "synchronize"]'), github.event.action) }}
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./dist/
+          source-dir: ./dist/sb
           action: deploy
 
       - name: Remove PR preview if closed without merge 
         if: ${{ github.event.action == 'closed' && !github.event.pull_request.merged }}
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./dist
+          source-dir: ./dist/sb
           action: remove
 
