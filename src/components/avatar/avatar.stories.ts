@@ -22,9 +22,8 @@ type Story = StoryObj;
 // More on writing stories with args: https://storybook.js.org/docs/html/writing-stories/args
 export const meuperfil: Story = {
   args: {
-    link: 'github.com', 
     imgSrc: 'https://avatars.githubusercontent.com/u/133207241?v=4', 
-    descricao: 'Octocat from Github '
+    descricao: 'Picture Profile '
   }
 };
 

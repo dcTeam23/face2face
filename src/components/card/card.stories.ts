@@ -25,7 +25,7 @@ export const Primary: Story = {
   args: {
     nome: 'Mansueto',
     cargo: 'Back-end',
-    img: 'https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif'
+    img: 'https://avatars.githubusercontent.com/u/133207241?v=4'
   }
 };
 
