@@ -39,7 +39,8 @@ jobs:
           npm ci
           npm run build
           npm run build-storybook
-          touch ./dist/sb/.nojekyll
+          pwd
+          touch dist/sb/.nojekyll
         shell: bash
         
       - name: Remove PR preview if closed without merge 
