@@ -1,4 +1,4 @@
-name: Preview Storybook
+name: PR Preview
 
 on:
   pull_request:
@@ -39,21 +39,20 @@ jobs:
           npm ci
           npm run build
           npm run build-storybook          
-          touch sb/.nojekyll
         shell: bash
         
       - name: Remove PR preview if closed without merge 
         if: ${{ (github.event.action == 'closed' && !github.event.pull_request.merged) || github.event.action == 'synchronize' }}
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./sb
+          source-dir: ./dist
           action: remove
       
       - name: Deploy PR Preview
         if: ${{ contains(fromJSON('["opened", "reopened", "synchronize"]'), github.event.action) }}
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./sb
+          source-dir: ./dist
           action: deploy
 
 

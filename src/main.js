@@ -23,7 +23,7 @@ app.innerHTML = `
       Click on the Vite, TypeScript and Storybook logos to learn more
     </p>
     <p>
-      <a href="/sb">
+      <a href="./sb">
         Click here to see our Storybook live! 
       </a>
     </p>
