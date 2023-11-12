@@ -13,8 +13,9 @@ concurrency: ci-${{ github.ref }}
 jobs:
   info: 
     uses: ./.github/workflows/call-info.yml
-
-  build:
+    
+  deploy:
+    permissions: write-all
     needs: info
     runs-on: ubuntu-latest
     steps:
@@ -36,12 +37,7 @@ jobs:
           npm run build
           npm run build-storybook          
         shell: bash
-        
-  deploy:
-    permissions: write-all
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+
       - name: Remove PR preview if closed without merge 
         if: ${{ (github.event.action == 'closed' && !github.event.pull_request.merged) || github.event.action == 'synchronize' }}
         uses: rossjrw/pr-preview-action@v1
