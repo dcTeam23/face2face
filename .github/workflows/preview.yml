@@ -1,13 +1,19 @@
 name: PR Preview
 
 on:
-  pull_request:
+  push:
+    branches:
+      - main
+  pull_request_target:
     types:
       - opened
       - reopened
       - synchronize
       - closed
-  
+
+permissions:
+  contents: read
+
 concurrency: ci-${{ github.ref }}
 
 jobs:
@@ -33,6 +39,7 @@ jobs:
           BASE_URL: ${{ needs.info.outputs.baseUrl }}/
         working-directory: .
         run: |
+          echo "${{ github.repository }}"
           npm ci
           npm run build
           npm run build-storybook          
@@ -49,5 +56,8 @@ jobs:
         if: ${{ contains(fromJSON('["opened", "reopened", "synchronize"]'), github.event.action) }}
         uses: rossjrw/pr-preview-action@v1
         with:
+          force: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-repository: ${{ github.repository }}
           source-dir: ./dist
           action: deploy
