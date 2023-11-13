@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - main
-  pull_request_target:
+  pull_request_review: 
+    types: edited
+  pull_request: 
     types:
       - opened
       - reopened
@@ -53,11 +55,9 @@ jobs:
           action: remove
       
       - name: Deploy PR Preview
-        if: ${{ contains(fromJSON('["opened", "reopened", "synchronize"]'), github.event.action) }}
+        if: ${{ contains(fromJSON('["edited"]'), github.event.action) }}
         uses: rossjrw/pr-preview-action@v1
         with:
-          force: true
-          token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-repository: ${{ github.repository }}
+          token: ${{ github.token }}
           source-dir: ./dist
           action: deploy
