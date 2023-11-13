@@ -18,7 +18,7 @@ const meta = {
 } satisfies Meta<CardProps>;
 
 export default meta;
-
+// Mais sobre como escrever histórias com argumentos: with args: https://storybook.js.org/docs/html/writing-stories/args
 type Story = StoryObj;
 export const Primary: Story = {
     args: {
