@@ -1,6 +1,6 @@
-
-img {
-    width: 50px;
-    border-radius: 50px;
-    height: 50px;
-  }
+.avatar-container img {
+    border: 3px solid red;
+    padding: 3px;
+    border-radius: 50%;
+    width: 250px;
+}
