@@ -1,7 +1,38 @@
-.body{}
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.card{}
+.body {
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
 
-.name{}
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
 
-.cargo{}
+.card{
+    max-width: 420px;
+    background-color: #FFF;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.name{
+    color: #111;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cargo{
+    color: #6a6f81;
+    font-size: 13px;
+}
