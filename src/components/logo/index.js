@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import './logo.css'
 
 
@@ -17,12 +16,3 @@ export function logo({link, imgSrc, descricao}) {
     </a>
   `
 }
-=======
-export function logo(link, img, descricao) {
-    return `
-    <a href=${link} target="_blank">
-    <img src="${img}" class="logo" alt="${descricao}"/>
-   </a>
-    `
-   }
->>>>>>> a1169f6 (botão feito)
