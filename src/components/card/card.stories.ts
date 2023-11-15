@@ -10,10 +10,22 @@ const meta = {
     return card(args);
   },
   argTypes: {
-    nome: {description: 'Nome do objeto de avatar'},
-    img: {description: 'endereço para a imagem do avatar'},
-    cargo: {description: 'cargo do objeto de avatar'},
-    idade: {description: 'Idade do objeto de avatar'}
+    nome: { description: 'Nome do objeto de avatar' },
+    img: { description: 'endereço para a imagem do avatar' },
+    cargo: { description: 'cargo do objeto de avatar' },
+    idade: { description: 'Idade do objeto de avatar' },
+    cor: {
+      control: { type: 'select' },
+      options: ['azul', 'verde', 'vermelho', 'default'],
+      default: "default",
+      description: "Cor da borda",
+
+    },
+    blur: {
+      control: {type: 'radio'},
+      options: ['blur', "Sem Blur"],   
+      description: "Ativação do blur nas informações do card"
+    }
   }
 } satisfies Meta<CardProps>;
 
@@ -23,8 +35,8 @@ type Story = StoryObj;
 // More on writing stories with args: https://storybook.js.org/docs/html/writing-stories/args
 export const Primary: Story = {
   args: {
-    nome: 'Polvo', 
-    img: 'https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif', 
+    nome: 'Polvo',
+    img: 'https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif',
     cargo: 'Emoji Github',
     idade: 20
   }
@@ -35,7 +47,8 @@ export const Wikipedia: Story = {
     nome: "João Vitor",
     img: 'https://avatars.githubusercontent.com/u/84153149?v=4',
     cargo: "Wikipedia",
-    idade: 20
+    idade: 20,
+    cor: 'azul'
   }
 }
 

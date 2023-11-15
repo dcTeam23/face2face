@@ -11,8 +11,8 @@
     width: 11.4375rem;
     height: 17rem;
     border-radius: 1.25rem;
-    border: 4px solid #5ee0f9;
     overflow: hidden;
+    border: 4px solid #444444;
     font-family: Poppins, Arial, Helvetica, sans-serif;
     overflow: hidden;
 }
@@ -20,6 +20,7 @@
 .card-container {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .card-container img {
@@ -32,9 +33,8 @@
     position: relative;
     width: 100%;
     height: 45px;
-    bottom: 60px;
+    bottom: 55px;
     background: rgba(87, 87, 87, 0.70);
-    backdrop-filter: blur(27.5px);
     display: inline-flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -67,4 +67,26 @@
     height: 1.8625rem;
     background-color: #fff;
     border-radius: 10px;
+    cursor: pointer;
 }
+
+.azul {
+    border: 4px solid #5ee0f9;
+}
+
+.verde {
+    border: 4px solid #5ef973;
+}
+
+.vermelho {
+    border: 4px solid #fd3434;
+}
+
+
+.blur {
+    backdrop-filter: blur(27.5px);
+}
+
+/* .default {
+    border: 4px solid #444444;
+} */
