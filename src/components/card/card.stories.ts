@@ -10,9 +10,10 @@ const meta = {
     return card(args);
   },
   argTypes: {
-    nome: {description: 'endereço para o nome do logo'},
-    img: {description: 'endereço para a imgaem do logo'},
-    cargo: {description: 'descrição da imagem do logo'}
+    nome: {description: 'Nome do objeto de avatar'},
+    img: {description: 'endereço para a imagem do avatar'},
+    cargo: {description: 'cargo do objeto de avatar'},
+    idade: {description: 'Idade do objeto de avatar'}
   }
 } satisfies Meta<CardProps>;
 
@@ -24,7 +25,17 @@ export const Primary: Story = {
   args: {
     nome: 'Polvo', 
     img: 'https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif', 
-    cargo: 'Emoji Github'
+    cargo: 'Emoji Github',
+    idade: 20
   }
 };
+
+export const Wikipedia: Story = {
+  args: {
+    nome: "João Vitor",
+    img: 'https://avatars.githubusercontent.com/u/84153149?v=4',
+    cargo: "Wikipedia",
+    idade: 20
+  }
+}
 
