@@ -1,5 +1,5 @@
 import { avatar } from "../avatar";
-
+import "./card.css"
 /**
  * @typedef { Object } CardProps
  * @property { string } CardProps.nome
@@ -10,17 +10,18 @@ import { avatar } from "../avatar";
 
 export function card({ nome, cargo, img }) {
   return `
+  <div class="card">
         <div class="container">
             <div class="header">
                 ${avatar({ imgSrc: img, descricao: "" })}
             </div>
 
             <div class="body">
-                <p>Nome: ${nome}</p>
-                <p>Cargo: ${cargo}</p>
+                <p class="nome"> ${nome}</p>
+                <p class="cargo"> ${cargo}</p>
             </div>
 
-
+        </div>
         </div>
     `;
 }

@@ -21,7 +21,7 @@ type Story = StoryObj;
 export const Primary: Story = {
   args: { 
     nome: ' Mr. Abraão Alves',
-    cargo: 'The King of Typescript',
+    cargo: 'The King of TypeScript',
     img: 'https://avatars.githubusercontent.com/u/608731?v=4', 
     
   }
