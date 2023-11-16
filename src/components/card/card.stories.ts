@@ -1,12 +1,11 @@
 import type { StoryObj, Meta } from '@storybook/html';
 
-import type { CardProps } from './index';
-import { card } from './index';
+import { CardProps, card } from './index';
 
-// Mais sobre como configurar histórias em: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
+// More on how to set up stories at: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 const meta = {
-  title: 'App/Card',
-  tags: ['autodocs'],    
+  title: 'App/card',
+  tags: ['autodocs'],
   render: (args) => {
     return card(args);
   },
@@ -24,7 +23,7 @@ const meta = {
     },
     blur: {
       control: {type: 'radio'},
-      options: ['blur', 'sem blur'],   
+      options: ['blur', "Sem Blur"],   
       description: "Ativação do blur nas informações do card"
     }
   }
@@ -37,7 +36,7 @@ export const Primary: Story = {
     args: {
         nome: 'Janna Tannus',
         cargo: 'Desenvolvedora FrontEnd',
-        imagem: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833564.jpg?w=826&t=st=1699886896~exp=1699887496~hmac=3c0017e78aac70da1e95fb8109f694eaf1db0cd5d9c6f565bd45fd36fab5cc84',
+        imagem: 'https://media.licdn.com/dms/image/D4D03AQEgmo4Jk2_XnQ/profile-displayphoto-shrink_800_800/0/1699300824500?e=1705536000&v=beta&t=7Y-brlT3U0uyFV0EqdrCxx-OkN9g8rxEEmZZEH-m0pU',
     }
 }
 
