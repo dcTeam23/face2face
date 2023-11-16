@@ -11,9 +11,22 @@ const meta = {
     return card(args);
   },
   argTypes: {
-    nome: {description: 'nome do objeto de avatar'},
-    cargo: {description: 'cargo do objeto de avatar'},
-    img: {description: 'endereço para img do avatar'},
+    nome: { description: 'Nome do objeto de avatar' },
+    img: { description: 'endereço para a imagem do avatar' },
+    cargo: { description: 'cargo do objeto de avatar' },
+    idade: { description: 'Idade do objeto de avatar' },
+    cor: {
+      control: { type: 'select' },
+      options: ['azul', 'verde', 'vermelho', 'default'],
+      default: "default",
+      description: "Cor da borda",
+
+    },
+    blur: {
+      control: {type: 'radio'},
+      options: ['blur', "Sem Blur"],   
+      description: "Ativação do blur nas informações do card"
+    }
   }
 } satisfies Meta<CardProps>;
 
@@ -25,7 +38,7 @@ export const Primary: Story = {
         nome: 'Janna Tannus',
         cargo: 'Desenvolvedora FrontEnd',
         imagem: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833564.jpg?w=826&t=st=1699886896~exp=1699887496~hmac=3c0017e78aac70da1e95fb8109f694eaf1db0cd5d9c6f565bd45fd36fab5cc84',
-    },
-};
+    }
+}
 
 
