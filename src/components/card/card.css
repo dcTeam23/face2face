@@ -1,9 +1,10 @@
+@import url(https://fonts.google.com/specimen/Poppins);
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
 
 .card {
     width: 11.4375rem;
@@ -30,8 +31,8 @@
 .card-container .footer {
     position: relative;
     width: 100%;
-    height: 50px;
-    bottom: 60px;
+    height: 45px;
+    bottom: 55px;
     background: rgba(87, 87, 87, 0.70);
     display: inline-flex;
     flex-wrap: wrap;
