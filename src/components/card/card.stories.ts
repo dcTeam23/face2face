@@ -24,7 +24,7 @@ const meta = {
     },
     blur: {
       control: {type: 'radio'},
-      options: ['blur', "Sem Blur"],   
+      options: ['blur', 'sem blur'],   
       description: "Ativação do blur nas informações do card"
     }
   }
