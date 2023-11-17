@@ -1,20 +1,20 @@
-.avatar{
+.avatar {
     width: 120px;
     height: 120px;
-        border-radius: 50%;
-       border: solid 3px white;
-        object-fit: cover;
-    
+    border-radius: 50%;
+    border: solid 3px #fff;
+    object-fit: cover;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 .avatar-square {
     border-radius: 5px;
     width: 120px;
     height: 120px;
+    border: solid 3px #fff;
 }

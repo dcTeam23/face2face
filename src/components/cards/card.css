@@ -2,64 +2,63 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*outline: 1px solid aqua;
-    outline-offset: -1px;*/
+    /*outline: .0625rem solid aqua;
+    outline-offset: -0.0625rem;*/
 }
 
-.container {
-    width: 262px;
-    height: 91px;
-    padding: 20px;
-
+.card-container {
+    width: 16.375rem;
+    height: 5.6875rem;
+    display: flex;
     flex-direction: column;
-    border-radius: 10px 10px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: .625rem .625rem 0rem 0rem;
     background: #82CFFA;
 }
 
 .card {
-    width: 262px;
-    height: 269.327px;
-    border-radius: 20px;
-    border-radius: 10px;
-    background: #ffffff;
+    width: 16.375rem;
+    height: 16.8329rem;
+    border-radius: 1.25rem;
+    border-radius: .625rem;
+    background: #fff;
     /* Drop Cards */
-    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: .3125rem .3125rem .9375rem 0rem rgba(0, 0, 0, 0.08);
 
 }
 
 .body {
     width: 100%;
     height: 100%;
-    margin-top: 15px;
+    margin-top: .9375rem;
 }
-
-
 
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 120px;
-    height: 120px;
-    margin-top: 8em;
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-top: 12rem;
     flex-shrink: 0;
-    border-radius: 120px;
+    border-radius: 7.5rem;
     background: url(https://avatars.githubusercontent.com/u/608731?v=4), lightgray 50% / cover no-repeat;
 }
 
 .nome {
-    padding: 30px;
+    padding: 1.875rem;
     display: flex;
-    width: 237px;
-    height: 22px;
+    width: 14.8125rem;
+    height: 1.375rem;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
     color: #6278F7;
     text-align: center;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -70,3 +69,6 @@
     justify-content: center;
     color: #212121;
 }
+
+/* Expanded Card */
+
