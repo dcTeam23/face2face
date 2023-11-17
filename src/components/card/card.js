@@ -20,7 +20,7 @@ export function card({nome, cargo, img}) {
     
         <div class="body">
         <p>Nome: ${nome}</p>
-        <p>Nome: ${cargo}</p>
+        <p>Cargo: ${cargo}</p>
         </div>
     </div>`
 }
