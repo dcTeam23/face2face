@@ -17,8 +17,8 @@ export function card({nome, cargo, img}){
         ${avatar({imgSrc: img, descricao: 'profile picture ' + nome})}
     </div>
     <div class="body">
-        <p>Nome: ${nome}</p>
-        <p>Cargo: ${cargo}</p>
+        <p class="nome">Nome: ${nome}</p>
+        <p class="cargo">Cargo: ${cargo}</p>
     </div>
 </div>
     `
