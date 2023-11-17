@@ -36,7 +36,7 @@ export const Primary: Story = {
     args: {
         nome: 'Janna Tannus',
         cargo: 'Desenvolvedora FrontEnd',
-        imagem: 'https://media.licdn.com/dms/image/D4D03AQEgmo4Jk2_XnQ/profile-displayphoto-shrink_800_800/0/1699300824500?e=1705536000&v=beta&t=7Y-brlT3U0uyFV0EqdrCxx-OkN9g8rxEEmZZEH-m0pU',
+        img: 'https://github.com/jmtannus/face2face/assets/61756665/2abb68b3-794b-4ade-8784-c973c231a395',
     }
 }
 
