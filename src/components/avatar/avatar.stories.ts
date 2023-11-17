@@ -20,7 +20,7 @@ type Story = StoryObj;
 // More on writing stories with args: https://storybook.js.org/docs/html/writing-stories/args
 export const Primary: Story = {
   args: { 
-    imgSrc: 'https://avatars.githubusercontent.com/u/103774096?v=4', 
-    descricao: 'Octocat from Github '
+    imgSrc: 'https://avatars.githubusercontent.com/u/608731?v=4', 
+    descricao: 'Imagem do Avatar'
   }
 };

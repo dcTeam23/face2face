@@ -11,7 +11,7 @@ const meta = {
   argTypes: {
     nome: {cargo: 'nome do profile'},
     cargo: {description: 'descrição da imagem do logo'},
-    img: {description: 'descrição da imagem do logo'}
+    img: {description: 'endereço da imagem do logo'}
   }
 } satisfies Meta<CardProps>;
 
@@ -27,3 +27,13 @@ export const Primary: Story = {
     
   }
 };
+
+export const Expend: Story = {
+  args: { 
+    expend: true,
+    nome: 'Mr. Abraão Alves',
+    cargo: 'The King of TypeScript',
+    img: 'https://avatars.githubusercontent.com/u/608731?v=4', 
+    
+  }
+}

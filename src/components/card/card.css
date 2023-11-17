@@ -23,7 +23,7 @@
 
 .container {
     width: 180px;
-    max-height: 59px;
+    max-height: 80px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -84,3 +84,4 @@
     font-size: 0.9rem;
     font-weight: normal;
 }
+

@@ -8,8 +8,8 @@ import "./avatar.css";
  */
 export function avatar({ imgSrc, descricao }) {
   return `
-  <div class="container">
-      <img src="${imgSrc}" class="avatar" alt="${descricao}" />
-      </div>
+  <div class="container-avatar">
+      <img id="image-avatar" src="${imgSrc}" class="avatar" alt="${descricao}" />
+  </div>
   `;
 }
