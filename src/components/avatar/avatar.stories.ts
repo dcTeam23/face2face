@@ -1,18 +1,16 @@
 import type { StoryObj, Meta } from '@storybook/html';
-
-import { avatar } from './index';
-import type {AvatarProps} from './index';
+import { AvatarProps, avatar } from './index';
 
 // More on how to set up stories at: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 const meta = {
-  title: 'App/Avatar',
+  title: 'App/avatar',
   tags: ['autodocs'],
   render: (args) => {
     return avatar(args);
   },
   argTypes: {
-    imgSrc: {description: 'endereço para a imgaem do avatar'},
-    descricao: {description: 'descrição da imagem do avatar'}
+    imgSrc: {description: 'endereço para a imgaem do logo'},
+    descricao: {description: 'descrição da imagem do logo'}
   }
 } satisfies Meta<AvatarProps>;
 
@@ -21,10 +19,8 @@ type Story = StoryObj;
 
 // More on writing stories with args: https://storybook.js.org/docs/html/writing-stories/args
 export const Primary: Story = {
-  args: {
-    imgSrc: 'https://img.freepik.com/psd-gratuitas/ilustracao-3d-de-avatar-ou-perfil-humano_23-2150671116.jpg?t=st=1699623817~exp=1699624417~hmac=cb23c24d0f509f138b36b639fb3bd96346c3269852e92c7fe0d5571e0bbe281d', 
-    descricao: 'Foto do avatar '
+  args: { 
+    imgSrc: 'https://s2-g1.glbimg.com/gZrnzQkY70EZ2ZP0zwB689bUAak=/0x0:5184x3456/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/9/e/EYKMBXR72tNdkUAgmZzQ/azul-caneta.jpg', 
+    descricao: 'Octocat from Github '
   }
 };
-
-//
