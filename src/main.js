@@ -11,7 +11,7 @@ const app = $('#app');
 
 app.innerHTML = `
   <div>
-    ${logo({link: "https://vitejs.dev", imgSrc: viteLogo, descricao: "Vite logo"})}
+    ${logo({link: "https://vitejs.dev", imgSrc: viteLogo, descricao: "Vite logo 2"})}
     ${logo({link: "https://www.typescriptlang.org/", imgSrc: typescriptLogo, descricao: "TypeScript logo"})}
     ${logo({link: "https://storybookjs.org/", imgSrc: storybookLogo, descricao: "Storybook logo"})}
 
