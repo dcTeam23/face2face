@@ -14,6 +14,7 @@ const meta = {
     nome: { description: "nome do profile" },
     cargo: { description: "cargo do profile" },
     img: { description: "imagem do profile" },
+    expanded: { description: "alterar vizualizacao do profile" },
   },
 } satisfies Meta<CardProps>;
 
@@ -25,6 +26,15 @@ export const Primary: Story = {
   args: {
     nome: "Daniel Machado",
     cargo: "developer",
-    img: "Octocat from Github ",
+    img: "https://avatars.githubusercontent.com/u/88352602?v=4",
+  },
+};
+
+export const Expanded: Story = {
+  args: {
+    expanded: true,
+    nome: "Daniel Machado",
+    cargo: "developer",
+    img: "https://avatars.githubusercontent.com/u/88352602?v=4",
   },
 };
