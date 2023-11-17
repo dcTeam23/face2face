@@ -1,25 +1,27 @@
-import { avatar } from '../avatar'
-import './card.css'
-
+import { avatar } from "../avatar";
+import "./card.css"
 /**
- * @typedef {Object} CardProps
- * @property {string} CardProps.nome
- * @property {string} CardProps.cargo 
- * @property {string} CardProps.img 
- * 
- * @param {CardProps} props
+ * @typedef { Object } CardProps
+ * @property { string } CardProps.nome
+ * @property { string } CardProps.cargo
+ * @property { string } CardProps.img 
+ * @param { CardProps } props
  */
 
-export function card(props) {
-
-  const { nome, cargo, img } = props;
+export function card({ nome, cargo, img }) {
   return `
-  <div class="card-container">
-    <div class="image">
-        ${avatar({ imgSrc: img, descricao: `profile picture from ${nome}` })}
-    </div>
-    <p> Nome: ${nome} </p>
-    <p> Cargo: ${cargo} </p>
-  </div>
-  `;
+  <div class="card">
+        <div class="container">
+            <div class="header">
+                ${avatar({ imgSrc: img, descricao: "" })}
+            </div>
+
+            <div class="body">
+                <p class="nome"> ${nome}</p>
+                <p class="cargo"> ${cargo}</p>
+            </div>
+
+        </div>
+        </div>
+    `;
 }
