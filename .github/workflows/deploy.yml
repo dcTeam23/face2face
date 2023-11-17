@@ -21,6 +21,8 @@ jobs:
       # Checkout to repository
       - name: Checkout to repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -50,6 +52,6 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           # 👇Runs Chromatic with the option to compress the build output.
           zip: true
-          
+
 
 
