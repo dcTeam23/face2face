@@ -7,9 +7,6 @@ img{
   
 }
 
-.container{
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.square{
+  border-radius: 2rem;
 }
