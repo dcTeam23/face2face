@@ -9,7 +9,7 @@ import "./avatar.css"
  * @param {AvatarProps} props
  */
 export function avatar({imgSrc, descricao}) {
-  return ` href
+  return `
       <img src="${imgSrc}" class="avatar" alt="${descricao}" />
   `
 }

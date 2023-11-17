@@ -13,7 +13,7 @@ const meta = {
 
     nome: {description: 'nome do profile'},
     cargo: {description: 'cargo do profile'},
-    img: {description: 'endereço para a imgaem do logo'},
+    img: {description: 'endereço para a imagem do logo'},
   }
 } satisfies Meta<CardProps>;
 
