@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*outline: 1px solid aqua;
+    outline-offset: -1px;*/
+}
+
+.container {
+    width: 262px;
+    height: 91px;
+    padding: 20px;
+
+    flex-direction: column;
+    border-radius: 10px 10px 0px 0px;
+    background: #82CFFA;
+}
+
+.card {
+    width: 262px;
+    height: 269.327px;
+    border-radius: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    /* Drop Cards */
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.08);
+
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 120px;
+    height: 120px;
+    margin-top: 8em;
+    flex-shrink: 0;
+    border-radius: 120px;
+    background: url(https://avatars.githubusercontent.com/u/608731?v=4), lightgray 50% / cover no-repeat;
+}
+
+.nome {
+    padding: 30px;
+    display: flex;
+    width: 237px;
+    height: 22px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #6278F7;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.cargo {
+    display: flex;
+    justify-content: center;
+    color: #212121;
+}
