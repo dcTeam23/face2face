@@ -12,7 +12,8 @@ const meta = {
   },
   argTypes: {
     imgSrc: {description: 'endereço para a imgaem do avatar'},
-    descricao: {description: 'descrição da imagem do avatar'}
+    descricao: {description: 'descrição da imagem do avatar'},
+    formato: {description: 'redondo/quadrado'},
   }
 } satisfies Meta<AvatarProps>;
 
@@ -23,7 +24,15 @@ type Story = StoryObj;
 export const Primary: Story = {
   args: {
     imgSrc: 'https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif', 
-    descricao: 'Octocat from Github '
+    descricao: 'Octocat from Github ',
+    formato: 'redondo',
   }
 };
 
+export const Secondary: Story = {
+  args: {
+    imgSrc: 'https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif', 
+    descricao: 'Octocat from Github ',
+    formato: 'quadrado'
+  }
+};

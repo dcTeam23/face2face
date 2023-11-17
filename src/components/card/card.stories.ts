@@ -15,6 +15,7 @@ const meta = {
     cargo: {description: 'cargo do profile'},
     img: {description: 'endereço para a imagem do avatar'},
     topcard: {description: 'imagem background do topo do card'},
+    expanded: {description: 'card expandido (expanded/noexpanded)'},
 }
 } satisfies Meta<CardProps>;
 
@@ -28,5 +29,18 @@ export const Primary: Story = {
     cargo: 'Dev em Formação',
     img: 'https://rodolfobertini.github.io/images/perfillinkedin150x150.jpg',
     topcard: 'https://github.com/rodolfobertini/rodolfobertini/assets/132242813/dfac4614-5d81-4f79-abee-0dcc2a971332',
+    expanded: 'noexpanded',
+    formato: 'redondo',
+  }
+};
+
+export const Secondary: Story = {
+  args: {
+    nome: 'Rodolfo Bertini', 
+    cargo: 'Dev em Formação',
+    img: 'https://rodolfobertini.github.io/images/perfillinkedin150x150.jpg',
+    topcard: 'https://github.com/rodolfobertini/rodolfobertini/assets/132242813/dfac4614-5d81-4f79-abee-0dcc2a971332',
+    expanded: 'expanded',
+    formato: 'redondo',
   }
 };
