@@ -1,15 +1,8 @@
 img{
     width: 120px;
     height: 120px;
-        border-radius: 50%;
-       border: solid 3px white;
-        object-fit: cover;
-    
-}
+    border-radius: 50%;
+    border: solid 1px #ffffff;
+    object-fit: cover;
+};
 
-.container{
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

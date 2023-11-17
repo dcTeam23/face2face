@@ -15,13 +15,11 @@ export function card({ nome, cargo, img }) {
             <div class="header">
                 ${avatar({ imgSrc: img, descricao: "" })}
             </div>
-
             <div class="body">
                 <p class="nome"> ${nome}</p>
                 <p class="cargo"> ${cargo}</p>
             </div>
-
         </div>
-        </div>
+    </div>
     `;
 }
