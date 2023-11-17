@@ -23,7 +23,8 @@ type Story = StoryObj;
 export const Primary: Story = {
   args: {
     nome: 'Osvaldo Holanda',
-    cargo: 'Full Stack Web Developer | HTML | CSS | Javascript | React | Node.js | Git',
+    cargo: 'Web Developer',
     img: 'https://avatars.githubusercontent.com/u/103774096?s=400&u=4fe9f493354559b971033b9dc7852c7f966f1264&v=4',
   },
 };
+
