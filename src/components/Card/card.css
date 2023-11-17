@@ -1,26 +1,31 @@
 
 div.header > img{
-    width: 200px;
+    width: 70%;
     border-radius: 50%;
+
   }
 
-div {
-  margin-top: 30px;
-  margin-right: 20%;
-  margin-left: 20%;
-  margin-bottom: auto;
+div.header{
+  display: flex;
   justify-content: center;
-  align-content: center;
+}
+div {
+  padding: 1% 1% 1%;
 }
 
 div.body {
+  display: flex;
+  justify-content: center;
   font-family: cursive;
 }
 
 .card {
-  border-style: inset;
+  display: grid;
+  border-style: solid;
+  border-color:black;
+  border-radius: 10px;
+  margin-right: 75%;
+  background-color:cornsilk;
 }
-
-
 
   
