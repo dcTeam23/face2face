@@ -1,5 +1,20 @@
-.card-container img {
-    width: 11rem;
-    height: 17rem;
-    object-fit: cover;
+.avatar{
+    width: 120px;
+    height: 120px;
+        border-radius: 50%;
+       border: solid 3px white;
+        object-fit: cover;
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-square {
+    border-radius: 5px;
+    width: 120px;
+    height: 120px;
 }

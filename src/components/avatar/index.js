@@ -1,18 +1,25 @@
-import './avatar.css'
-
+import "./avatar.css";
 
 /**
- * @typedef {Object} avatarProps
- * @property {string} avatarProps.link - some description here
- * @property {string} avatarProps.imgSrc - some description here
- * @property {string} avatarProps.descricao - some description here
- * 
- * @param {avatarProps} props
+ * @typedef {Object} AvatarProps
+ * @property {string} AvatarProps.imgSrc - some description here
+ * @property {string} AvatarProps.descricao - some description here
+ * @property {boolean} AvatarProps.square
+ * @param {AvatarProps} props
  */
-export function avatar({link, imgSrc, descricao}) {
-  return `
-    <a class="avatar-container" href="${link}" target="_blank">
+export function avatar({ imgSrc, descricao, square }) {
+  if (square == true) {
+    return `
+  <div class="container">
+      <img src="${imgSrc}" class="avatar-square" alt="${descricao}" />
+      </div>
+  `;
+  }
+  else {
+    return `
+  <div class="container">
       <img src="${imgSrc}" class="avatar" alt="${descricao}" />
-    </a>
-  `
+      </div>
+  `;
+  }
 }
