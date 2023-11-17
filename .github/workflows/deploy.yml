@@ -1,16 +1,12 @@
-name: PR Preview
+name: Main Deploy 
 
 on:
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - closed
+  push: 
+    branches:
+      - main
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency: ci-${{ github.ref }}
 
@@ -18,7 +14,7 @@ jobs:
   info: 
     uses: ./.github/workflows/call-info.yml
 
-  preview:
+  deploy:
     needs: info
     runs-on: ubuntu-latest
     steps:
@@ -43,20 +39,11 @@ jobs:
           npm run build-storybook          
         shell: bash
         
-      - name: Remove PR preview if closed without merge 
-        if: ${{ (github.event.action == 'closed' && !github.event.pull_request.merged) || github.event.action == 'synchronize' }}
-        uses: rossjrw/pr-preview-action@v1
-        with:
-          source-dir: ./dist
-          action: remove
-      
       - name: Deploy PR Preview
         id: preview-deploy
-        if: ${{ contains(fromJSON('["opened", "reopened", "synchronize"]'), github.event.action) }}
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./dist
-          action: deploy
       
       - name: Deploy Chromatic
         if: steps.preview-deploy.outcome == 'success'
@@ -65,5 +52,6 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           # 👇Runs Chromatic with the option to compress the build output.
           zip: true
+
 
 
