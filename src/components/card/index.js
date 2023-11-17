@@ -1,6 +1,7 @@
 import { avatar } from '../avatar'
 import './card.css'
 
+
 /**
  * @typedef {Object} CardProps
  * @property {string} CardProps.nome
@@ -10,9 +11,8 @@ import './card.css'
  * @param {CardProps} props
  */
 
-export function card(props) {
+export function card({ nome, cargo, img }) {
 
-  const { nome, cargo, img } = props;
   return `
   <div class="card-container">
     <div class="image">
