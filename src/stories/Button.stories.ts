@@ -1,32 +1,27 @@
-import type { StoryObj, Meta } from '@storybook/html';
-import type { ButtonProps } from './Button';
-import { createButton } from './Button';
+import type { Meta, StoryObj } from '@storybook/react';
 
-// More on how to set up stories at: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
+import { Button } from './Button';
+
+// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   title: 'Example/Button',
-  tags: ['autodocs'],
-  render: (args) => {
-    // You can either use a function to create DOM elements or use a plain html string!
-    // return `<div>${label}</div>`;
-    return createButton(args);
+  component: Button,
+  parameters: {
+    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
+    layout: 'centered',
   },
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
+  tags: ['autodocs'],
+  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
-    label: { control: 'text' },
-    onClick: { action: 'onClick' },
-    primary: { control: 'boolean' },
-    size: {
-      control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
-    },
   },
-} satisfies Meta<ButtonProps>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
-type Story = StoryObj<ButtonProps>;
+type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/html/writing-stories/args
+// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
     primary: true,
