@@ -5,28 +5,25 @@ import "./card.css"
  * @property { string } CardProps.nome
  * @property { string } CardProps.cargo
  * @property { string } CardProps.img 
- * @property {boolean} CardProps.expend
+ * @property {boolean} CardProps.square
  * @param { CardProps } props
  */
 
-export function card({ nome, cargo, img, expend }) {
-    if (expend) {
+export function card({ nome, cargo, img, square }) {
+    if (square) {
         return `
-            <div class="card">
-                <div class="container">
-                    <div class="header">
-                        ${avatar({ imgSrc: img, descricao: "" })}
-                    </div>
-                    
+        <div class="card">
+            <div class="container">
+                <div class="header">
+                    ${avatar({ imgSrc: img, descricao: "" })}
+                </div>
+                <div class="body">
+                    <p class="nome"> ${nome}</p>
+                    <p class="cargo"> ${cargo}</p>
                 </div>
             </div>
-            <style>
-            img {
-                width: 120px;
-                height: 120px;
-            }
-            </style>
-            `;
+        </div>
+        `;
         } else {
     return `
     <div class="card">

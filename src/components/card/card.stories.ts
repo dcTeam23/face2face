@@ -28,9 +28,9 @@ export const Primary: Story = {
   }
 };
 
-export const Expend: Story = {
+export const Square: Story = {
   args: { 
-    expend: true,
+    square: true,
     nome: 'Mr. Abraão Alves',
     cargo: 'The King of TypeScript',
     img: 'https://avatars.githubusercontent.com/u/608731?v=4', 
