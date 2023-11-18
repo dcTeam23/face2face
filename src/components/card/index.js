@@ -23,6 +23,11 @@ export function card({ nome, cargo, img, square }) {
                 </div>
             </div>
         </div>
+        <style>
+            img{
+                border-radius: 10px;
+            }
+        </style>
         `;
         } else {
     return `
