@@ -9,9 +9,9 @@ const meta = {
     return avatar(args);
   },
   argTypes: {
-    imgSrc: {description: 'endereço para a imgaem do logo'},
+    imgSrc: {description: 'URL da imagem do avatar'},
     descricao: {description: 'descrição da imagem do logo'},
-    square: {description: 'quadrado ou não?'}
+    square: {description: 'Define as bordas como quadradas', defaultValue: {summary: "False"}}
   }
 } satisfies Meta<AvatarProps>;
 

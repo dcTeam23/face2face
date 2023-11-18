@@ -9,11 +9,11 @@ const meta = {
     return card(args);
   },
   argTypes: {
-    nome: {description: 'nome do profile', defaultValue: {summary: "Profile Name"}, },
-    cargo: {description: 'cargo do profile', defaultValue: {summary: "Profile Role"}},
-    img: {description: 'URL da imagem do profile', defaultValue: {summary: "Profile image"}},
+    nome: {description: 'Nome que ira aparecer no card', defaultValue: {summary: "Profile Name"}, },
+    cargo: {description: 'Cargo que ira aparecer no card', defaultValue: {summary: "Profile Role"}},
+    img: {description: 'URL da imagem do avatar', defaultValue: {summary: "Profile image"}},
     expanded: {description: 'Card em modo expandido', defaultValue: {summary: "False"}} ,
-    SquareC: {description: 'Imagem quadrada', defaultValue: {summary: "False"}}
+    SquareC: {description: 'Avatar com as bordas quadradas', defaultValue: {summary: "False"}}
   }
 } satisfies Meta<CardProps>;
 
@@ -37,5 +37,6 @@ export const Secondary: Story = {
     cargo: 'The King of TypeScript',
     img: 'https://avatars.githubusercontent.com/u/608731?v=4', 
     expanded: true,
+    SquareC: true,
   }
 };
