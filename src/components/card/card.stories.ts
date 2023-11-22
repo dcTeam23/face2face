@@ -24,7 +24,7 @@ type Story = StoryObj;
 export const Primary: Story = {
   args: {
    nome: 'João Pedro',
-   cargo: 'Student Full Stack Developer',
+   cargo: 'Estudante Full Stack',
    img: 'https://avatars.githubusercontent.com/u/132667649?v=4',
   }
 };
