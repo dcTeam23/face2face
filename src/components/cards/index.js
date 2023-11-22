@@ -5,15 +5,16 @@ import "./card.css"
  * @property { string } CardProps.nome
  * @property { string } CardProps.cargo
  * @property { string } CardProps.img
+ * @property { string } CardProps.Mode
  * @property { boolean } CardProps.expanded
  * @property { boolean } CardProps.SquareC
  * @param { CardProps } props
  */
 
-export function card({ nome, cargo, img, expanded, SquareC }) {
+export function card({ nome, cargo, img, expanded, SquareC, Mode }) {
     if (expanded == true) {
         return `
-      <div class="expanded">
+      <div class="expanded ${Mode}">
             <div class="container-expanded">
                 <div class="header-expanded">
                     ${avatar({ imgSrc: img, descricao: "Image of" + nome, square: SquareC })}
@@ -30,7 +31,7 @@ export function card({ nome, cargo, img, expanded, SquareC }) {
     }
     else {
         return `
-      <div class="card">
+      <div class="card ${Mode}">
             <div class="card-container">
                 <div class="header">
                     ${avatar({ imgSrc: img, descricao: "Image of" + nome, square: SquareC })}
@@ -44,8 +45,5 @@ export function card({ nome, cargo, img, expanded, SquareC }) {
             </div>
             </div>
         `;
-
     }
-
-
 }

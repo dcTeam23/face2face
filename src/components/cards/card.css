@@ -16,18 +16,16 @@
     justify-content: center;
     align-items: center;
     border-radius: .625rem .625rem 0rem 0rem;
-    background: #82CFFA;
 }
 
 .card {
     width: 16.375rem;
     height: 16.8329rem;
     border-radius: .625rem;
-    background: #fff;
     /* Drop Cards */
     box-shadow: .3125rem .3125rem .9375rem 0rem rgba(0, 0, 0, 0.08);
-
 }
+
 
 .body {
     width: 100%;
@@ -56,7 +54,6 @@
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    color: #6278F7;
     text-align: center;
     font-family: Montserrat;
     font-size: 1.125rem;
@@ -74,7 +71,6 @@
 /* Expanded Card */
 
 .expanded {
-    background: #fff;
     width: 90%;
     height: 12rem;
     border-radius: 10px;
@@ -90,7 +86,6 @@
 }
 
 .header-expanded {
-    background-color: #82CFFA;
     display: flex;
     align-items: center;
     padding: 15px;
@@ -113,13 +108,95 @@
 .nome-expanded {
     height: 30%;
     font-weight: 700;
-    color: #6278F7;
     font-size: 2em;
-    border-bottom: 1px solid #212121;
 }
 
 .cargo-expanded {
     height: 100%;
     font-size: 1.3em;
 }
+
+/* Modes */
+
+/* NormalCard */
+
+.light {
+    background: #fff;
+}
+
+.light .card-container {
+    background-color: #82CFFA;
+}
+
+.light .nome {
+    color: #6278F7;
+}
+
+.light .cargo {
+    color: #212121;
+}
+
+.dark {
+    background: #242424;
+}
+
+.dark .card-container {
+    background-color: #FE810B;
+}
+
+.dark .nome {
+    color: #FFA200;
+}
+
+.dark .cargo {
+    color: #FFFFFF;
+}
+
+.dark .header .avatar {
+    border: 3px solid #242424;
+}
+
+/* ExpandedCard */
+
+
+.light {
+    background: #fff;
+}
+
+.light .header-expanded {
+    background-color: #82CFFA;
+}
+
+.light .nome-expanded {
+    color: #6278F7;
+    border-bottom: 1px solid #212121;
+}
+
+.light .cargo-expanded {
+    color: #212121;
+}
+
+
+.dark {
+    background: #242424;
+}
+
+.dark .header-expanded {
+    background-color: #FE810B;
+}
+
+.dark .nome-expanded {
+    color: #FFA200;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.dark .cargo-expanded {
+    color: #FFFFFF;
+}
+
+.dark .avatar-square, .dark .avatar {
+    border: 3px solid #242424;
+}
+
+
 
