@@ -13,14 +13,14 @@ import "./card.css"
  */
 export function card({nome, cargo, img}) {
     
-    return `<div class="card">
+    return `<div class="container">
         <div class="header">
         ${avatar({imgSrc: img, descricao: 'profile picture from ' + nome})}
         </div>
     
         <div class="body">
-        <p>Nome: ${nome}</p>
-        <p>Cargo: ${cargo}</p>
+        <p class="nome"> ${nome}</p>
+        <p class="cargo"> ${cargo}</p>
         </div>
     </div>`
 }

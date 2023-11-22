@@ -1,9 +1,42 @@
 
+.container {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+  }
 
-.card img {
-    
-}
-
-.card body {
-    
-}
+  .container:hover{
+    transform: scale(1.02);
+  }
+  
+  .header {
+    background-color: #00BFFF;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .header img {
+    width: 100px;
+    height: 100px; 
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .body {
+    padding: 20px;
+  }
+  
+  .nome {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #4169E1;
+  }
+  
+  .cargo {
+    font-size: 14px;
+    color: #777;
+    text-align: center;
+  }
