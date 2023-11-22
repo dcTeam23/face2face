@@ -11,7 +11,7 @@ const meta = {
     return avatar(args);
   },
   argTypes: {
-    imgSrc: {description: 'endereço para a imgaem do logo'},
+    imgSrc: {description: 'endereço para a imagem do logo'},
     descricao: {description: 'descrição da imagem do logo'}
   }
 } satisfies Meta<AvatarProps>;
