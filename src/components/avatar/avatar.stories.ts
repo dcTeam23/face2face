@@ -25,5 +25,8 @@ export const Primary: Story = {
   }
 };
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 743e054 (componente avatar cncluido)
