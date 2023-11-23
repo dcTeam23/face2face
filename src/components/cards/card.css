@@ -199,4 +199,42 @@
 }
 
 
+@media (max-width:690px) {
+    .expanded {
+        height: 30rem;
+    }
+
+    .container-expanded {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-expanded {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-expanded img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .expanded-body {
+        text-align: center;
+    }
+}
+
+@media (max-width:405px) {
+    .nome-expanded {
+        font-size: 1.2em;
+    }
+
+    .cargo-expanded {
+        padding-top: 10px;
+        font-size: 1.1em;
+    }
+}
+
+
 
