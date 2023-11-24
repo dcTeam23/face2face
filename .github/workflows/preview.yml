@@ -1,0 +1,69 @@
+name: PR Preview
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency: ci-${{ github.ref }}
+
+jobs:
+  info: 
+    uses: ./.github/workflows/call-info.yml
+
+  preview:
+    needs: info
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout to repository
+      - name: Checkout to repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+
+      - name: Build Vite Project
+        env:
+          BASE_URL: ${{ needs.info.outputs.baseUrl }}/
+        working-directory: .
+        run: |
+          npm ci
+          npm run build
+          npm run build-storybook          
+        shell: bash
+        
+      - name: Remove PR preview if closed without merge 
+        if: ${{ (github.event.action == 'closed' && !github.event.pull_request.merged) || github.event.action == 'synchronize' }}
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./dist
+          action: remove
+      
+      - name: Deploy PR Preview
+        id: preview-deploy
+        if: ${{ contains(fromJSON('["opened", "reopened", "synchronize"]'), github.event.action) }}
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./dist
+          action: deploy
+      
+      - name: Deploy Chromatic
+        if: steps.preview-deploy.outcome == 'success'
+        uses: chromaui/action@v1        
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          # 👇Runs Chromatic with the option to compress the build output.
+          zip: true
+
+
