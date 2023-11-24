@@ -16,7 +16,7 @@ import { avatar } from '../avatar';
  * @param {CardProps} props
  */
 export function card(props) {
-  const {nome, cargo, img, topcard, expanded, formato} = props;
+  const {nome, cargo, img, topcard, expanded} = props;
 
   return `
 <div class="container ${expanded}">
