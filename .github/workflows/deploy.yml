@@ -1,0 +1,57 @@
+name: Main Deploy 
+
+on:
+  push: 
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency: ci-${{ github.ref }}
+
+jobs:
+  info: 
+    uses: ./.github/workflows/call-info.yml
+
+  deploy:
+    needs: info
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout to repository
+      - name: Checkout to repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+
+      - name: Build Vite Project
+        env:
+          BASE_URL: ${{ needs.info.outputs.baseUrl }}/
+        working-directory: .
+        run: |
+          npm ci
+          npm run build
+          npm run build-storybook          
+        shell: bash
+        
+      - name: Deploy PR Preview
+        id: preview-deploy
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./dist
+      
+      - name: Deploy Chromatic
+        if: steps.preview-deploy.outcome == 'success'
+        uses: chromaui/action@v1        
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          # 👇Runs Chromatic with the option to compress the build output.
+          zip: true
+
+
+

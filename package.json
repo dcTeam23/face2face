@@ -18,6 +18,7 @@
     "@storybook/html": "^7.5.3",
     "@storybook/html-vite": "^7.5.3",
     "@storybook/testing-library": "^0.2.2",
+    "chromatic": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.5.3",
