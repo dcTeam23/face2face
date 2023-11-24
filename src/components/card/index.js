@@ -1,4 +1,4 @@
-import { avatar } from '../avatar';
+import { avatar } from '../';
 import './card.css'
 
 
