@@ -1,72 +1,176 @@
+@import url(https://fonts.google.com/specimen/Poppins);
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*outline: 1px solid aqua;
-    outline-offset: -1px;*/
+    /*outline: .0625rem solid aqua;
+    outline-offset: -0.0625rem;*/
 }
 
-.container {
-    width: 262px;
-    height: 91px;
-    padding: 20px;
-
+.card-container {
+    width: 16.375rem;
+    height: 5.6875rem;
+    display: flex;
     flex-direction: column;
-    border-radius: 10px 10px 0px 0px;
-    background: #82CFFA;
+    justify-content: center;
+    align-items: center;
+    border-radius: .625rem .625rem 0rem 0rem;
+    background-color: #82CFFA;
 }
 
 .card {
-    width: 262px;
-    height: 269.327px;
-    border-radius: 20px;
-    border-radius: 10px;
-    background: #ffffff;
+    width: 16.375rem;
+    height: 16.8329rem;
+    border-radius: .625rem;
     /* Drop Cards */
-    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.08);
-
+    box-shadow: .3125rem .3125rem .9375rem 0rem rgba(0, 0, 0, 0.08);
 }
 
 .body {
     width: 100%;
     height: 100%;
-    margin-top: 15px;
+    margin-top: .9375rem;
 }
-
-
 
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 120px;
-    height: 120px;
-    margin-top: 8em;
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-top: 12rem;
     flex-shrink: 0;
-    border-radius: 120px;
+    border-radius: 7.5rem;
     background: url(https://avatars.githubusercontent.com/u/608731?v=4), lightgray 50% / cover no-repeat;
 }
 
 .nome {
-    padding: 30px;
+    padding: 1.875rem;
     display: flex;
-    width: 237px;
-    height: 22px;
+    width: 14.8125rem;
+    height: 1.375rem;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    color: #6278F7;
     text-align: center;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    color: #6278F7;
 }
 
 .cargo {
     display: flex;
     justify-content: center;
     color: #212121;
+}
+
+/* Expanded Card */
+
+.expanded {
+    width: 90%;
+    height: 20rem;
+    border-radius: 15px;
+    box-shadow: .3125rem .3125rem .9375rem 0rem rgba(0, 0, 0, 0.08);
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    border: 1px solid #cacaca;
+}
+
+.container-expanded {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-expanded {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+    height: 100%;
+}
+
+.header-expanded img {
+    height: 8rem;
+    position: relative;
+    top: 60px;
+}
+
+.expanded-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    gap: 8px;
+}
+
+.infos-expanded {
+    display: flex;
+    flex-direction: column;
+    color: #666666;
+}
+
+.nome-expanded {
+    height: 30%;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.cargo-expanded {
+    height: 100%;
+    font-size: 1.2em;
+}
+
+/* Breakpoint */
+
+@media (max-width:690px) {
+
+    .expanded {
+        height: 22rem;
+    }
+
+    .header-expanded {
+        justify-content: center;
+    }
+
+    .expanded-body {
+        align-items: center;
+    }
+
+    .infos-expanded {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width:405px) {
+
+    .nome-expanded {
+        font-size: 1.1em;
+    }
+
+    .cargo-expanded {
+        font-size: .9em;
+    }
+
+    .expanded {
+        height: 26rem;
+    }
+
+    .expanded-body {
+        top: 40px;
+    }
+
+    .infos-expanded {
+        gap: 10px;
+    }
 }
