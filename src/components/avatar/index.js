@@ -1,4 +1,4 @@
-import "./avatar.css";
+import './avatar.css'
 
 /**
  * @typedef {Object} AvatarProps
@@ -6,10 +6,9 @@ import "./avatar.css";
  * @property {string} AvatarProps.descricao - some description here
  * @param {AvatarProps} props
  */
-export function avatar({ imgSrc, descricao }) {
+ 
+export function avatar({imgSrc, descricao}) {
   return `
-  <div class="container">
-      <img src="${imgSrc}" class="avatar" alt="${descricao}" />
-      </div>
-  `;
+        <img src="${imgSrc}" class="avatar" alt="${descricao}" />
+  `
 }
