@@ -4,7 +4,7 @@ import './avatar.css'
  * @typedef {Object} AvatarProps
  * @property {string} AvatarProps.imgSrc - some description here
  * @property {string} AvatarProps.descricao - some description here
- * @property {string} AvatarProps.formato - some description here
+ * @property {string} [AvatarProps.formato] - some description here
  * 
  * 
  * @param {AvatarProps} props
