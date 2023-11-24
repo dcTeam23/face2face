@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
     border-radius: .625rem .625rem 0rem 0rem;
+    background-color: #82CFFA;
 }
 
 .card {
@@ -60,6 +61,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    color: #6278F7;
 }
 
 .cargo {
@@ -72,29 +74,32 @@
 
 .expanded {
     width: 90%;
-    height: 12rem;
-    border-radius: 10px;
+    height: 20rem;
+    border-radius: 15px;
     box-shadow: .3125rem .3125rem .9375rem 0rem rgba(0, 0, 0, 0.08);
     font-family: Poppins, Arial, Helvetica, sans-serif;
+    border: 1px solid #cacaca;
 }
 
 .container-expanded {
-    height: 100%;
+    height: 50%;
     width: 100%;
-    display: inline-flex;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-expanded {
     display: flex;
     align-items: center;
     padding: 15px;
-    border-radius: 5px 0 0 5px;
+    border-radius: 15px 15px 0 0;
     height: 100%;
 }
 
 .header-expanded img {
-    height: 9rem;
+    height: 8rem;
+    position: relative;
+    top: 60px;
 }
 
 .expanded-body {
@@ -103,138 +108,25 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    gap: 8px;
+}
+
+.infos-expanded {
+    display: flex;
+    flex-direction: column;
+    color: #666666;
 }
 
 .nome-expanded {
     height: 30%;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .cargo-expanded {
     height: 100%;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
-
-/* Modes */
-
-/* NormalCard */
-
-.light {
-    background: #fff;
-}
-
-.light .card-container {
-    background-color: #82CFFA;
-}
-
-.light .nome {
-    color: #6278F7;
-}
-
-.light .cargo {
-    color: #212121;
-}
-
-.dark {
-    background: #242424;
-}
-
-.dark .card-container {
-    background-color: #FE810B;
-}
-
-.dark .nome {
-    color: #FFA200;
-}
-
-.dark .cargo {
-    color: #FFFFFF;
-}
-
-.dark .header .avatar {
-    border: 3px solid #242424;
-}
-
-/* ExpandedCard */
-
-
-.light {
-    background: #fff;
-}
-
-.light .header-expanded {
-    background-color: #82CFFA;
-}
-
-.light .nome-expanded {
-    color: #6278F7;
-    border-bottom: 1px solid #212121;
-}
-
-.light .cargo-expanded {
-    color: #212121;
-}
-
-
-.dark {
-    background: #242424;
-}
-
-.dark .header-expanded {
-    background-color: #FE810B;
-}
-
-.dark .nome-expanded {
-    color: #FFA200;
-    border-bottom: 1px solid #FFFFFF;
-}
-
-.dark .cargo-expanded {
-    color: #FFFFFF;
-}
-
-.dark .avatar-square, .dark .avatar {
-    border: 3px solid #242424;
-}
-
-
-@media (max-width:690px) {
-    .expanded {
-        height: 30rem;
-    }
-
-    .container-expanded {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .header-expanded {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .header-expanded img {
-        width: 12rem;
-        height: 12rem;
-    }
-
-    .expanded-body {
-        text-align: center;
-    }
-}
-
-@media (max-width:405px) {
-    .nome-expanded {
-        font-size: 1.2em;
-    }
-
-    .cargo-expanded {
-        padding-top: 10px;
-        font-size: 1.1em;
-    }
-}
-
-
-

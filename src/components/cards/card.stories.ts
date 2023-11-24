@@ -29,11 +29,13 @@ const meta = {
       description: 'Avatar com as bordas quadradas',
       defaultValue: { summary: "False" }
     },
-    Mode: {
-      description: "Modo de cores do card",
-      control: { type: 'radio' },
-      options: ['light', 'dark'],
-      defaultValue: { summary: "Light" }
+    tec: {
+      description: 'Tecnologias mais usadas pela pessoa',
+      defaultValue: { summary: "TypeScript"}
+    },
+    banner: {
+      description: "Banner de fundo do card",
+      defaultValue: { summary: "URL do banner"}
     }
   }
 } satisfies Meta<CardProps>;
@@ -49,7 +51,8 @@ export const Primary: Story = {
     img: 'https://avatars.githubusercontent.com/u/608731?v=4',
     expanded: false,
     SquareC: false,
-    Mode: 'light'
+    tec: "TypeScript",
+    banner: "https://media.licdn.com/dms/image/C4D16AQHLnpXmkyphCw/profile-displaybackgroundimage-shrink_350_1400/0/1598925512221?e=1706140800&v=beta&t=5NzE-lUfNWTAFmxBSwpEFL1_xYLc0-hiYj2ygDh1dd4"
   }
 };
 
@@ -59,7 +62,7 @@ export const Secondary: Story = {
     cargo: 'The King of TypeScript',
     img: 'https://avatars.githubusercontent.com/u/608731?v=4',
     expanded: true,
-    SquareC: true,
-    Mode: 'light'
+    SquareC: false,
+    tec: "TypeScript"
   }
 };
