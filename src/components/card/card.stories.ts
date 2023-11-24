@@ -1,16 +1,19 @@
 import type { StoryObj, Meta } from '@storybook/html';
-import type { CardProps } from './index';
+
 import { card } from './index';
+import type {CardProps} from './index';
+
 // More on how to set up stories at: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 const meta = {
-  title: 'App/cards',
+  title: 'App/Card',
   tags: ['autodocs'],
   render: (args) => {
     return card(args);
   },
   argTypes: {
-    nome: {cargo: 'nome do profile'},
-    cargo: {description: 'descrição da imagem do logo'},img: {description: 'descrição da imagem do logo'}
+    nome: {desciption: 'nome do profile'},
+    cargo: {desciption: 'cargo do profile'},
+    img: {desciption: 'endereço para a imagem do logo'}
   }
 } satisfies Meta<CardProps>;
 
@@ -19,13 +22,9 @@ type Story = StoryObj;
 
 // More on writing stories with args: https://storybook.js.org/docs/html/writing-stories/args
 export const Primary: Story = {
-  args: { 
-    nome: ' Mr. Abraão Alves',
-    cargo: 'The King of TypeScript',
-    img: 'https://avatars.githubusercontent.com/u/608731?v=4', 
-    
+  args: {
+    nome: 'Mansueto',
+    cargo: 'Back-end',
+    img: 'https://avatars.githubusercontent.com/u/133207241?v=4'
   }
 };
-
-
-
