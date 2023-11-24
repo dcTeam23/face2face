@@ -1,4 +1,5 @@
-import { avatar } from '../';
+// @ts-nocheck
+import { avatar } from '../avatar';
 import './card.css'
 
 
