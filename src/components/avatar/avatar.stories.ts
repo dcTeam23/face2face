@@ -1,5 +1,4 @@
 import type { StoryObj, Meta } from '@storybook/html';
-
 import { avatar } from './index';
 import type {AvatarProps} from './index';
 

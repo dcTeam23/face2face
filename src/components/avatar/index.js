@@ -1,6 +1,5 @@
 import './avatar.css'
 
-
 /**
  * @typedef {Object} AvatarProps
  * @property {string} AvatarProps.imgSrc - some description here
