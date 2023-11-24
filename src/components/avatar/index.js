@@ -4,6 +4,7 @@ import "./avatar.css";
  * @typedef {Object} AvatarProps
  * @property {string} AvatarProps.imgSrc - some description here
  * @property {string} AvatarProps.descricao - some description here
+
  * @property {boolean} AvatarProps.square
  * @param {AvatarProps} props
  */
@@ -23,3 +24,4 @@ export function avatar({ imgSrc, descricao, square }) {
   `;
   }
 }
+
