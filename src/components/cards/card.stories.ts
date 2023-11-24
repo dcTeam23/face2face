@@ -63,6 +63,7 @@ export const Secondary: Story = {
     img: 'https://avatars.githubusercontent.com/u/608731?v=4',
     expanded: true,
     SquareC: false,
-    tec: "TypeScript"
+    tec: "TypeScript",
+    banner: "https://media.licdn.com/dms/image/C4D16AQHLnpXmkyphCw/profile-displaybackgroundimage-shrink_350_1400/0/1598925512221?e=1706140800&v=beta&t=5NzE-lUfNWTAFmxBSwpEFL1_xYLc0-hiYj2ygDh1dd4"
   }
 };

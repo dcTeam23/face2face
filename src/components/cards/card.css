@@ -130,3 +130,49 @@
     height: 100%;
     font-size: 1.2em;
 }
+
+/* Breakpoint */
+
+@media (max-width:690px) {
+
+    .expanded {
+        height: 22rem;
+    }
+
+    .header-expanded {
+        justify-content: center;
+    }
+
+    .expanded-body {
+        align-items: center;
+    }
+
+    .infos-expanded {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width:405px) {
+
+    .nome-expanded {
+        font-size: 1.1em;
+    }
+
+    .cargo-expanded {
+        font-size: .9em;
+    }
+
+    .expanded {
+        height: 26rem;
+    }
+
+    .expanded-body {
+        top: 40px;
+    }
+
+    .infos-expanded {
+        gap: 10px;
+    }
+}
+
