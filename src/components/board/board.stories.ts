@@ -11,6 +11,7 @@ const meta = {
   argTypes: {
     perfil: { cargo: "profile" },
     list: { description: "list of profiles" },
+    mode: { description: "mode style"}
   },
 } satisfies Meta<BoardProps>;
 
@@ -20,6 +21,7 @@ type Story = StoryObj;
 // More on writing stories with args: https://storybook.js.org/docs/html/writing-stories/args
 export const Primary: Story = {
   args: {
+    mode: 'light',
     perfil: {
       nome: " Mr. Abraão Alves",
       cargo: "The King of TypeScript",
