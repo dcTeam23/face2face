@@ -1,4 +1,15 @@
-.grid {
-  display: flex;
+.board{
+  padding: 10px;
+
+}
+.board .card-expanded {
+  margin-bottom: 20px;
 }
 
+.board .grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  
+  gap: 30px 15px;
+}

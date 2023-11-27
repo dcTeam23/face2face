@@ -27,7 +27,7 @@ export const board = ({perfil, list, mode='light'}) => {
               ${card({img: item.img, nome: item.nome, cargo: 'dev', mode})}
             </div>
             `
-          )}
+          ).join('')}
         </div>
     </div>
   `  
