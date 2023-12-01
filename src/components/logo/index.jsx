@@ -1,3 +1,4 @@
+import React from 'react';
 import './logo.css'
 
 
@@ -15,4 +16,17 @@ export function logo({link, imgSrc, descricao}) {
       <img src="${imgSrc}" class="logo" alt="${descricao}" />
     </a>
   `
+}
+/**
+* 
+* @param {LogoProps} props
+* @returns
+*/
+
+export function Logo({link, imgSrc, descricao}) {
+  return (
+    <a className="logo" href={link} target="_blank">
+      <img src={imgSrc} className="logo" alt={descricao} />
+    </a>
+  )
 }
