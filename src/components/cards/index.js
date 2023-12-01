@@ -5,9 +5,9 @@ import "./card.css";
  * @property { string } CardProps.nome
  * @property { string } CardProps.cargo
  * @property { string } CardProps.img
- * @property { string } CardProps.mode
- * @property { boolean } CardProps.expanded
- * @property { string } CardProps.bannerColor
+ * @property { 'light'|'dark' } CardProps.mode
+ * @property { boolean } [CardProps.expanded]
+ * @property { string } [CardProps.bannerColor]
  * @param { CardProps } props
  */
 
