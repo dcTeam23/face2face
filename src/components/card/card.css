@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 11.4375rem;
+    height: 17rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    border: 4px solid #444444;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.card-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-container img {
+    width: 11rem;
+    height: 17rem;
+    object-fit: cover;
+}
+
+.card-container .footer {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    bottom: 55px;
+    background: rgba(87, 87, 87, 0.70);
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    padding: 5px;
+    color: #fff;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer p {
+    font-size: .875em;
+    font-weight: 700;
+}
+
+.footer span {
+    font-size: .6875rem;
+    font-weight: 400;
+}
+
+.footer .button-white {
+    width: 1.875rem;
+    height: 1.8625rem;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.azul {
+    border: 4px solid #5ee0f9;
+}
+
+.verde {
+    border: 4px solid #5ef973;
+}
+
+.vermelho {
+    border: 4px solid #fd3434;
+}
+
+
+.blur {
+    backdrop-filter: blur(27.5px);
+}
+
+/* .default {
+    border: 4px solid #444444;
+} */

@@ -1,4 +1,5 @@
-import "./avatar.css";
+import './avatar.css'
+
 
 /**
  * @typedef {Object} AvatarProps

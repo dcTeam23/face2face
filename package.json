@@ -21,6 +21,7 @@
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-interactions": "^7.5.1",
     "@storybook/addon-links": "^7.5.1",
+    "@storybook/addon-styling-webpack": "^0.0.5",
     "@storybook/blocks": "^7.5.1",
     "@storybook/html": "^7.5.1",
     "@storybook/html-vite": "^7.5.1",
