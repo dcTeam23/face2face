@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  /*outline: 1px solid aqua;
+    outline-offset: -1px;*/
+}
+
+.card {
+  width: 180px;
+  height: max-content;
+  padding-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 90px;
+  border-radius: 10px 10px 0 0;
+}
+
+.body {
+  width: 100%;
+  padding: 0 .4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: .3rem;
+  margin-top: 4.1rem;
+}
+
+.avatar {
+  margin-top: 4.3rem;
+}
+
+.body-expanded img{
+  margin-top: 0
+}
+
+.nome {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cargo {
+  line-height: 20px;
+}
+
+/* CSS DO CARD EXPANDIDO */
+
+.card-expanded {
+  width: 100%;
+  padding: .75rem;
+  height: max-content;
+  border-radius: 10px;
+}
+
+.body-expanded {
+  width: 100%;
+  padding: 0 .4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+}
+
+.body-expanded img {
+  height: 100%;
+}
+
+.info-profile {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.info-profile .nome {
+  font-size: 1.6rem;
+}
+
+/* CSS DOS MODOS (LIGHT E DARK) */
+
+.light{
+  background-color: #ffffff;
+  border: 1px solid #EFF1F7;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.08);
+}
+
+.dark {
+  background-color: #2A2A2A;
+}
+
+.light .nome {
+  color: #000118;
+}
+
+.dark .nome {
+  color: #f3f3f3
+}
+
+.light .cargo {
+  color: rgba(0, 1, 23, .4)
+}
+
+.dark .cargo {
+  color: rgba(212, 211, 211, 0.4) 
+}
