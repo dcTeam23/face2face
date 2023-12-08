@@ -5,8 +5,8 @@ import viteLogo from '/vite.svg'
 import storybookLogo from '/storybook.svg'
 import { $ } from "./select";
 import './style.css'
-import { logo } from "./components/logo";
-import { counter } from "./components/counter";
+import { Logo } from "./components/logo";
+import { Counter } from "./components/counter";
 
 const app = $("#app");
 
@@ -14,24 +14,25 @@ ReactDOM.createRoot(app).render(
   <React.StrictMode>
     <div>
       <h2> REACT VERSION</h2>
-      {logo({
-        link: "https://vitejs.dev",
-        imgSrc: viteLogo,
-        descricao: "Vite logo",
-      })}
-      $
-      {logo({
-        link: "https://www.typescriptlang.org/",
-        imgSrc: typescriptLogo,
-        descricao: "TypeScript logo",
-      })}
-      $
-      {logo({
-        link: "https://storybookjs.org/",
-        imgSrc: storybookLogo,
-        descricao: "Storybook logo",
-      })}
-      <h1>Vite + TypeScript + Storybook</h1>${counter()}
+      <Logo 
+        link= "https://vitejs.dev"
+        imgSrc= {viteLogo}
+        descricao="Vite logo"
+      ></Logo>
+      
+      <Logo
+        link= "https://www.typescriptlang.org/"
+        imgSrc= {typescriptLogo}
+        descricao= "TypeScript logo"
+      ></Logo>
+      
+      <Logo
+        link= "https://storybookjs.org/"
+        imgSrc= {storybookLogo}
+        descricao= "Storybook logo"
+      ></Logo>
+      <h1>Vite + TypeScript + Storybook</h1>
+      <Counter></Counter>
       <p className="read-the-docs">
         Click on the Vite, TypeScript and Storybook logos to learn more
       </p>
