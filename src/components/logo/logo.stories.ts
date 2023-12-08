@@ -1,6 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/html';
 
-import { logo } from './index';
+import { Logo } from './index';
 import type {LogoProps} from './index';
 
 // More on how to set up stories at: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
@@ -8,7 +8,7 @@ const meta = {
   title: 'App/Logo',
   tags: ['autodocs'],
   render: (args) => {
-    return logo(args);
+    return Logo(args);
   },
   argTypes: {
     link: {description: 'endereço para o link do logo'},
